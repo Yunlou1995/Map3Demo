@@ -1,0 +1,30 @@
+PODS:
+  - AMap3DMap-NO-IDFA (6.5.0):
+    - AMapFoundation-NO-IDFA (~> 1.5)
+  - AMapFoundation-NO-IDFA (1.5.5)
+  - AMapLocation-NO-IDFA (2.6.1):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - AMapNavi-NO-IDFA (6.5.0):
+    - AMap3DMap-NO-IDFA (~> 6.4)
+    - AMapFoundation-NO-IDFA (~> 1.5)
+
+DEPENDENCIES:
+  - AMapLocation-NO-IDFA
+  - AMapNavi-NO-IDFA
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AMap3DMap-NO-IDFA
+    - AMapFoundation-NO-IDFA
+    - AMapLocation-NO-IDFA
+    - AMapNavi-NO-IDFA
+
+SPEC CHECKSUMS:
+  AMap3DMap-NO-IDFA: 8cdbdce78a17fe1170e208fc6371875aec81533e
+  AMapFoundation-NO-IDFA: a09d8cef57c10d4f841595829a574bcea67fc323
+  AMapLocation-NO-IDFA: ffd69b8b88f553d0b252d4967bf301ad2afff9c0
+  AMapNavi-NO-IDFA: 54847a3dcc40cf5b56495c2ca92e10272c86215a
+
+PODFILE CHECKSUM: c64fbe8c70cf243fb54b44eab3df762bde921362
+
+COCOAPODS: 1.5.3
