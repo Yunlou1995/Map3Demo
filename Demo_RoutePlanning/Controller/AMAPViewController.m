@@ -11,6 +11,8 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapNaviKit/AMapNaviKit.h>
 
+#import "MapSearchTableViewController.h"
+
 @interface AMAPViewController ()
 <AMapNaviDriveManagerDelegate,
 MAMapViewDelegate,
@@ -27,6 +29,10 @@ AMapNaviDriveViewDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"地图";
+    UIBarButtonItem * searchItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchAddress)];
+    [self.navigationItem setRightBarButtonItem:searchItem];
+
     [self.view addSubview:self.mapView];
     
 }
@@ -43,9 +49,16 @@ AMapNaviDriveViewDelegate>
 
 }
 
+
+-(void)searchAddress {
+    MapSearchTableViewController * vc = [[MapSearchTableViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:true];
+    
+}
+
 -(MAMapView *)mapView {
     if (!_mapView) {
-        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 44)];
+        _mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64)];
         _mapView.showsUserLocation = true;
         _mapView.userTrackingMode = MAUserTrackingModeFollow;
         _mapView.delegate = self;

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		14BE5CD67098E5FD20D649DD /* libPods-Demo_RoutePlanningUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E13538CCB6D660872C95ED /* libPods-Demo_RoutePlanningUITests.a */; };
+		A03BA07021C110D60059765C /* AppDelegate+MapConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA06F21C110D60059765C /* AppDelegate+MapConfigure.m */; };
+		A03BA07321C111EA0059765C /* ErrorInfoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA07121C111EA0059765C /* ErrorInfoUtility.m */; };
+		A03BA07E21C113F30059765C /* MapSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA07D21C113F30059765C /* MapSearchTableViewController.m */; };
 		A068BA5021BA5230003B2895 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA4F21BA5230003B2895 /* AppDelegate.m */; };
 		A068BA5621BA5230003B2895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A068BA5421BA5230003B2895 /* Main.storyboard */; };
 		A068BA5821BA5231003B2895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A068BA5721BA5231003B2895 /* Assets.xcassets */; };
@@ -15,7 +18,6 @@
 		A068BA5E21BA5231003B2895 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA5D21BA5231003B2895 /* main.m */; };
 		A068BA6821BA5231003B2895 /* Demo_RoutePlanningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA6721BA5231003B2895 /* Demo_RoutePlanningTests.m */; };
 		A068BA7321BA5231003B2895 /* Demo_RoutePlanningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA7221BA5231003B2895 /* Demo_RoutePlanningUITests.m */; };
-		A068BA8221BA5530003B2895 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA8121BA5530003B2895 /* TableViewController.m */; };
 		A068BA8821BA5DF7003B2895 /* AMAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA8721BA5DF7003B2895 /* AMAPViewController.m */; };
 		A068BA8C21BA7489003B2895 /* AMAPDriveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA8B21BA7489003B2895 /* AMAPDriveViewController.m */; };
 		C41E40EEA7370D0BC85F4F60 /* libPods-Demo_RoutePlanningTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A94E0EE70AE866636E97B13 /* libPods-Demo_RoutePlanningTests.a */; };
@@ -44,6 +46,12 @@
 		768B0C94ACBE22C283B30AF0 /* Pods-Demo_RoutePlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo_RoutePlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo_RoutePlanning/Pods-Demo_RoutePlanning.release.xcconfig"; sourceTree = "<group>"; };
 		89E13538CCB6D660872C95ED /* libPods-Demo_RoutePlanningUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo_RoutePlanningUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A94E0EE70AE866636E97B13 /* libPods-Demo_RoutePlanningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo_RoutePlanningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A03BA06E21C110D60059765C /* AppDelegate+MapConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MapConfigure.h"; sourceTree = "<group>"; };
+		A03BA06F21C110D60059765C /* AppDelegate+MapConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+MapConfigure.m"; sourceTree = "<group>"; };
+		A03BA07121C111EA0059765C /* ErrorInfoUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorInfoUtility.m; sourceTree = "<group>"; };
+		A03BA07221C111EA0059765C /* ErrorInfoUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorInfoUtility.h; sourceTree = "<group>"; };
+		A03BA07C21C113F30059765C /* MapSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapSearchTableViewController.h; sourceTree = "<group>"; };
+		A03BA07D21C113F30059765C /* MapSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapSearchTableViewController.m; sourceTree = "<group>"; };
 		A068BA4B21BA5230003B2895 /* Demo_RoutePlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_RoutePlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A068BA4E21BA5230003B2895 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A068BA4F21BA5230003B2895 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,8 +66,6 @@
 		A068BA6E21BA5231003B2895 /* Demo_RoutePlanningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo_RoutePlanningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A068BA7221BA5231003B2895 /* Demo_RoutePlanningUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo_RoutePlanningUITests.m; sourceTree = "<group>"; };
 		A068BA7421BA5231003B2895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A068BA8021BA5530003B2895 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		A068BA8121BA5530003B2895 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		A068BA8621BA5DF7003B2895 /* AMAPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAPViewController.h; sourceTree = "<group>"; };
 		A068BA8721BA5DF7003B2895 /* AMAPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAPViewController.m; sourceTree = "<group>"; };
 		A068BA8A21BA7489003B2895 /* AMAPDriveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAPDriveViewController.h; sourceTree = "<group>"; };
@@ -122,6 +128,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A03BA07421C111F00059765C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A03BA07221C111EA0059765C /* ErrorInfoUtility.h */,
+				A03BA07121C111EA0059765C /* ErrorInfoUtility.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		A03BA07521C1120D0059765C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A068BA8621BA5DF7003B2895 /* AMAPViewController.h */,
+				A068BA8721BA5DF7003B2895 /* AMAPViewController.m */,
+				A068BA8A21BA7489003B2895 /* AMAPDriveViewController.h */,
+				A068BA8B21BA7489003B2895 /* AMAPDriveViewController.m */,
+				A03BA07C21C113F30059765C /* MapSearchTableViewController.h */,
+				A03BA07D21C113F30059765C /* MapSearchTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A03BA07621C112110059765C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A03BA06E21C110D60059765C /* AppDelegate+MapConfigure.h */,
+				A03BA06F21C110D60059765C /* AppDelegate+MapConfigure.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A03BA07821C1122E0059765C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A068BA4E21BA5230003B2895 /* AppDelegate.h */,
+				A068BA4F21BA5230003B2895 /* AppDelegate.m */,
+				A068BA5421BA5230003B2895 /* Main.storyboard */,
+				A068BA5721BA5231003B2895 /* Assets.xcassets */,
+				A068BA5921BA5231003B2895 /* LaunchScreen.storyboard */,
+				A068BA5C21BA5231003B2895 /* Info.plist */,
+				A068BA5D21BA5231003B2895 /* main.m */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		A068BA4221BA5230003B2895 = {
 			isa = PBXGroup;
 			children = (
@@ -147,19 +198,10 @@
 		A068BA4D21BA5230003B2895 /* Demo_RoutePlanning */ = {
 			isa = PBXGroup;
 			children = (
-				A068BA4E21BA5230003B2895 /* AppDelegate.h */,
-				A068BA4F21BA5230003B2895 /* AppDelegate.m */,
-				A068BA8021BA5530003B2895 /* TableViewController.h */,
-				A068BA8121BA5530003B2895 /* TableViewController.m */,
-				A068BA8621BA5DF7003B2895 /* AMAPViewController.h */,
-				A068BA8721BA5DF7003B2895 /* AMAPViewController.m */,
-				A068BA8A21BA7489003B2895 /* AMAPDriveViewController.h */,
-				A068BA8B21BA7489003B2895 /* AMAPDriveViewController.m */,
-				A068BA5421BA5230003B2895 /* Main.storyboard */,
-				A068BA5721BA5231003B2895 /* Assets.xcassets */,
-				A068BA5921BA5231003B2895 /* LaunchScreen.storyboard */,
-				A068BA5C21BA5231003B2895 /* Info.plist */,
-				A068BA5D21BA5231003B2895 /* main.m */,
+				A03BA07821C1122E0059765C /* Resource */,
+				A03BA07621C112110059765C /* Category */,
+				A03BA07521C1120D0059765C /* Controller */,
+				A03BA07421C111F00059765C /* Utility */,
 			);
 			path = Demo_RoutePlanning;
 			sourceTree = "<group>";
@@ -410,9 +452,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A068BA5E21BA5231003B2895 /* main.m in Sources */,
+				A03BA07E21C113F30059765C /* MapSearchTableViewController.m in Sources */,
 				A068BA8821BA5DF7003B2895 /* AMAPViewController.m in Sources */,
+				A03BA07021C110D60059765C /* AppDelegate+MapConfigure.m in Sources */,
+				A03BA07321C111EA0059765C /* ErrorInfoUtility.m in Sources */,
 				A068BA5021BA5230003B2895 /* AppDelegate.m in Sources */,
-				A068BA8221BA5530003B2895 /* TableViewController.m in Sources */,
 				A068BA8C21BA7489003B2895 /* AMAPDriveViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

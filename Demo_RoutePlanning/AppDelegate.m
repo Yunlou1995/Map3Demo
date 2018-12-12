@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "TableViewController.h"
+//#import "TableViewController.h"
+#import "AMAPViewController.h"
+#import "AppDelegate+MapConfigure.h"
 
 @interface AppDelegate ()
 @property(strong, nonatomic)UINavigationController * navigationController;
@@ -17,8 +19,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    TableViewController * tableVC = [[TableViewController alloc] init];
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:tableVC];
+
+    [self configureMapAuth];
+
+//    TableViewController * vc = [[TableViewController alloc] init];
+    AMAPViewController * vc = [[AMAPViewController alloc] init];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     [self.window setRootViewController:self.navigationController];
 
     return YES;

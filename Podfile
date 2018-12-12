@@ -6,6 +6,7 @@ target 'Demo_RoutePlanning' do
   # use_frameworks!
   pod 'AMapNavi-NO-IDFA'
   pod 'AMapLocation-NO-IDFA'
+  pod 'AMapSearch-NO-IDFA'
 
   target 'Demo_RoutePlanningTests' do
     inherit! :search_paths
