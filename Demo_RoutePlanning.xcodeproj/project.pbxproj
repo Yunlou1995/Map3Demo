@@ -9,8 +9,19 @@
 /* Begin PBXBuildFile section */
 		14BE5CD67098E5FD20D649DD /* libPods-Demo_RoutePlanningUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89E13538CCB6D660872C95ED /* libPods-Demo_RoutePlanningUITests.a */; };
 		A03BA07021C110D60059765C /* AppDelegate+MapConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA06F21C110D60059765C /* AppDelegate+MapConfigure.m */; };
-		A03BA07321C111EA0059765C /* ErrorInfoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA07121C111EA0059765C /* ErrorInfoUtility.m */; };
 		A03BA07E21C113F30059765C /* MapSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA07D21C113F30059765C /* MapSearchTableViewController.m */; };
+		A03BA08321C224E70059765C /* UIView+LayoutMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA08021C224E60059765C /* UIView+LayoutMethods.m */; };
+		A03BA08421C224E70059765C /* UIView+HandyAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA08121C224E60059765C /* UIView+HandyAutoLayout.m */; };
+		A03BA08821C238480059765C /* MapPOIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA08721C238480059765C /* MapPOIAnnotation.m */; };
+		A03BA08C21C24E9E0059765C /* PoiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA08A21C24E9E0059765C /* PoiDetailViewController.m */; };
+		A03BA09121C24F360059765C /* SubPoiDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA08F21C24F360059765C /* SubPoiDetailViewController.m */; };
+		A03BA09221C24F360059765C /* SubPoiListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA09021C24F360059765C /* SubPoiListViewController.m */; };
+		A03BA09C21C24FD00059765C /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA09721C24FCF0059765C /* CommonUtility.m */; };
+		A03BA09E21C24FD00059765C /* ErrorInfoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA09921C24FCF0059765C /* ErrorInfoUtility.m */; };
+		A03BA09F21C24FD00059765C /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA09A21C24FD00059765C /* UIView+Toast.m */; };
+		A03BA0B621C2503E0059765C /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA0AE21C2503D0059765C /* NSArray+PureLayout.m */; };
+		A03BA0B721C2503E0059765C /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA0B221C2503D0059765C /* NSLayoutConstraint+PureLayout.m */; };
+		A03BA0B821C2503E0059765C /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A03BA0B421C2503D0059765C /* ALView+PureLayout.m */; };
 		A068BA5021BA5230003B2895 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A068BA4F21BA5230003B2895 /* AppDelegate.m */; };
 		A068BA5621BA5230003B2895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A068BA5421BA5230003B2895 /* Main.storyboard */; };
 		A068BA5821BA5231003B2895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A068BA5721BA5231003B2895 /* Assets.xcassets */; };
@@ -48,10 +59,35 @@
 		9A94E0EE70AE866636E97B13 /* libPods-Demo_RoutePlanningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo_RoutePlanningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03BA06E21C110D60059765C /* AppDelegate+MapConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+MapConfigure.h"; sourceTree = "<group>"; };
 		A03BA06F21C110D60059765C /* AppDelegate+MapConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+MapConfigure.m"; sourceTree = "<group>"; };
-		A03BA07121C111EA0059765C /* ErrorInfoUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorInfoUtility.m; sourceTree = "<group>"; };
-		A03BA07221C111EA0059765C /* ErrorInfoUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorInfoUtility.h; sourceTree = "<group>"; };
 		A03BA07C21C113F30059765C /* MapSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapSearchTableViewController.h; sourceTree = "<group>"; };
 		A03BA07D21C113F30059765C /* MapSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapSearchTableViewController.m; sourceTree = "<group>"; };
+		A03BA07F21C224E60059765C /* UIView+LayoutMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutMethods.h"; sourceTree = "<group>"; };
+		A03BA08021C224E60059765C /* UIView+LayoutMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutMethods.m"; sourceTree = "<group>"; };
+		A03BA08121C224E60059765C /* UIView+HandyAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HandyAutoLayout.m"; sourceTree = "<group>"; };
+		A03BA08221C224E70059765C /* UIView+HandyAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HandyAutoLayout.h"; sourceTree = "<group>"; };
+		A03BA08621C238480059765C /* MapPOIAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapPOIAnnotation.h; sourceTree = "<group>"; };
+		A03BA08721C238480059765C /* MapPOIAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPOIAnnotation.m; sourceTree = "<group>"; };
+		A03BA08A21C24E9E0059765C /* PoiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiDetailViewController.m; sourceTree = "<group>"; };
+		A03BA08B21C24E9E0059765C /* PoiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiDetailViewController.h; sourceTree = "<group>"; };
+		A03BA08D21C24F360059765C /* SubPoiListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPoiListViewController.h; sourceTree = "<group>"; };
+		A03BA08E21C24F360059765C /* SubPoiDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubPoiDetailViewController.h; sourceTree = "<group>"; };
+		A03BA08F21C24F360059765C /* SubPoiDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPoiDetailViewController.m; sourceTree = "<group>"; };
+		A03BA09021C24F360059765C /* SubPoiListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPoiListViewController.m; sourceTree = "<group>"; };
+		A03BA09521C24FCF0059765C /* ErrorInfoUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorInfoUtility.h; sourceTree = "<group>"; };
+		A03BA09621C24FCF0059765C /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		A03BA09721C24FCF0059765C /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		A03BA09921C24FCF0059765C /* ErrorInfoUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorInfoUtility.m; sourceTree = "<group>"; };
+		A03BA09A21C24FD00059765C /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		A03BA09B21C24FD00059765C /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
+		A03BA0AD21C2503D0059765C /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		A03BA0AE21C2503D0059765C /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		A03BA0AF21C2503D0059765C /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		A03BA0B021C2503D0059765C /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		A03BA0B121C2503D0059765C /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		A03BA0B221C2503D0059765C /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		A03BA0B321C2503D0059765C /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		A03BA0B421C2503D0059765C /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		A03BA0B521C2503D0059765C /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		A068BA4B21BA5230003B2895 /* Demo_RoutePlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_RoutePlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A068BA4E21BA5230003B2895 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A068BA4F21BA5230003B2895 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -131,8 +167,25 @@
 		A03BA07421C111F00059765C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				A03BA07221C111EA0059765C /* ErrorInfoUtility.h */,
-				A03BA07121C111EA0059765C /* ErrorInfoUtility.m */,
+				A03BA0B121C2503D0059765C /* ALView+PureLayout.h */,
+				A03BA0B421C2503D0059765C /* ALView+PureLayout.m */,
+				A03BA0AD21C2503D0059765C /* NSArray+PureLayout.h */,
+				A03BA0AE21C2503D0059765C /* NSArray+PureLayout.m */,
+				A03BA0B021C2503D0059765C /* NSLayoutConstraint+PureLayout.h */,
+				A03BA0B221C2503D0059765C /* NSLayoutConstraint+PureLayout.m */,
+				A03BA0B521C2503D0059765C /* PureLayout.h */,
+				A03BA0AF21C2503D0059765C /* PureLayout+Internal.h */,
+				A03BA0B321C2503D0059765C /* PureLayoutDefines.h */,
+				A03BA09B21C24FD00059765C /* CommonUtility.h */,
+				A03BA09721C24FCF0059765C /* CommonUtility.m */,
+				A03BA09521C24FCF0059765C /* ErrorInfoUtility.h */,
+				A03BA09921C24FCF0059765C /* ErrorInfoUtility.m */,
+				A03BA09621C24FCF0059765C /* UIView+Toast.h */,
+				A03BA09A21C24FD00059765C /* UIView+Toast.m */,
+				A03BA08221C224E70059765C /* UIView+HandyAutoLayout.h */,
+				A03BA08121C224E60059765C /* UIView+HandyAutoLayout.m */,
+				A03BA07F21C224E60059765C /* UIView+LayoutMethods.h */,
+				A03BA08021C224E60059765C /* UIView+LayoutMethods.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -173,6 +226,28 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		A03BA08521C224F60059765C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A03BA08621C238480059765C /* MapPOIAnnotation.h */,
+				A03BA08721C238480059765C /* MapPOIAnnotation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A03BA08921C24E940059765C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A03BA08E21C24F360059765C /* SubPoiDetailViewController.h */,
+				A03BA08F21C24F360059765C /* SubPoiDetailViewController.m */,
+				A03BA08D21C24F360059765C /* SubPoiListViewController.h */,
+				A03BA09021C24F360059765C /* SubPoiListViewController.m */,
+				A03BA08B21C24E9E0059765C /* PoiDetailViewController.h */,
+				A03BA08A21C24E9E0059765C /* PoiDetailViewController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		A068BA4221BA5230003B2895 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +273,8 @@
 		A068BA4D21BA5230003B2895 /* Demo_RoutePlanning */ = {
 			isa = PBXGroup;
 			children = (
+				A03BA08921C24E940059765C /* Common */,
+				A03BA08521C224F60059765C /* Model */,
 				A03BA07821C1122E0059765C /* Resource */,
 				A03BA07621C112110059765C /* Category */,
 				A03BA07521C1120D0059765C /* Controller */,
@@ -295,6 +372,11 @@
 				TargetAttributes = {
 					A068BA4A21BA5230003B2895 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A068BA6221BA5231003B2895 = {
 						CreatedOnToolsVersion = 10.1;
@@ -451,13 +533,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A03BA08C21C24E9E0059765C /* PoiDetailViewController.m in Sources */,
 				A068BA5E21BA5231003B2895 /* main.m in Sources */,
+				A03BA0B721C2503E0059765C /* NSLayoutConstraint+PureLayout.m in Sources */,
+				A03BA09C21C24FD00059765C /* CommonUtility.m in Sources */,
+				A03BA09F21C24FD00059765C /* UIView+Toast.m in Sources */,
+				A03BA0B621C2503E0059765C /* NSArray+PureLayout.m in Sources */,
 				A03BA07E21C113F30059765C /* MapSearchTableViewController.m in Sources */,
+				A03BA09121C24F360059765C /* SubPoiDetailViewController.m in Sources */,
+				A03BA09221C24F360059765C /* SubPoiListViewController.m in Sources */,
 				A068BA8821BA5DF7003B2895 /* AMAPViewController.m in Sources */,
+				A03BA09E21C24FD00059765C /* ErrorInfoUtility.m in Sources */,
 				A03BA07021C110D60059765C /* AppDelegate+MapConfigure.m in Sources */,
-				A03BA07321C111EA0059765C /* ErrorInfoUtility.m in Sources */,
+				A03BA08421C224E70059765C /* UIView+HandyAutoLayout.m in Sources */,
+				A03BA0B821C2503E0059765C /* ALView+PureLayout.m in Sources */,
+				A03BA08821C238480059765C /* MapPOIAnnotation.m in Sources */,
 				A068BA5021BA5230003B2895 /* AppDelegate.m in Sources */,
 				A068BA8C21BA7489003B2895 /* AMAPDriveViewController.m in Sources */,
+				A03BA08321C224E70059765C /* UIView+LayoutMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

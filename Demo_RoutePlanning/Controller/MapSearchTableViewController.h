@@ -7,10 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import "MapPOIAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol MapSearchTableViewDelegate <NSObject>
+
+-(void)tableViewController:(UITableViewController *)tableVC didSelectPOI:(MapPOIAnnotation *)poi;
+
+@end
 
 @interface MapSearchTableViewController : UITableViewController
+
+@property(weak, nonatomic)id <MapSearchTableViewDelegate>delegate;
 
 @end
 

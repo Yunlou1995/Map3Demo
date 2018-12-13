@@ -22,9 +22,14 @@
 
     [self configureMapAuth];
 
-//    TableViewController * vc = [[TableViewController alloc] init];
+    [[UINavigationBar appearance] setTintColor:UIColor.whiteColor];
+    [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    [[UINavigationBar appearance] setBackgroundColor:UIColor.whiteColor];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.14 green:0.65 blue:0.97 alpha:1.00]];
+
     AMAPViewController * vc = [[AMAPViewController alloc] init];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.backgroundColor = UIColor.whiteColor;
     [self.window setRootViewController:self.navigationController];
 
     return YES;

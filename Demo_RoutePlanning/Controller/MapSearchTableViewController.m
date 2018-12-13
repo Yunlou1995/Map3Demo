@@ -7,16 +7,17 @@
 //
 
 #import "MapSearchTableViewController.h"
-#import <AMapFoundationKit/AMapFoundationKit.h>
-#import <AMapSearchKit/AMapSearchKit.h>
+#import "PoiDetailViewController.h"
 
-@interface MapSearchTableViewController ()<UISearchControllerDelegate, UISearchResultsUpdating, AMapSearchDelegate>
+@interface MapSearchTableViewController ()
+<UISearchControllerDelegate,
+UISearchResultsUpdating,
+AMapSearchDelegate,
+UISearchBarDelegate>
 
 @property(strong, nonatomic)AMapSearchAPI* searchAPI;
 @property(strong, nonatomic)UISearchController* searchController;
-
-@property(strong, nonatomic)NSMutableArray<AMapPOI*>* POIArray;
-
+@property(strong, nonatomic)NSMutableArray* POIArray;
 
 @end
 
@@ -28,35 +29,45 @@
     if (self) {
         self.POIArray = [NSMutableArray array];
     }
+
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.title = @"搜索";
+
     self.searchAPI = [[AMapSearchAPI alloc] init];
     self.searchAPI.delegate = self;
 
-    self.tableView.backgroundColor = UIColor.whiteColor;
-
-    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    self.searchController.searchResultsUpdater = self;
-
-    self.searchController.dimsBackgroundDuringPresentation = false;
-//    if (@available(iOS 9.1, *)) {
-//        [self.searchController setObscuresBackgroundDuringPresentation:true];
-//    } else {
-            // Fallback on earlier versions
-//    }
-    self.searchController.delegate = self;
-    self.navigationItem.titleView = self.searchController.searchBar;
+    [self initSearchController];
+    [self configureTableView];
 
     [self.tableView reloadData];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.searchController.active = NO;
+}
+
+-(void)configureTableView {
+    self.tableView.tableFooterView = [UIView new];
+    self.tableView.backgroundColor = UIColor.whiteColor;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
+}
+
+-(void)initSearchController {
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    [self.searchController.searchBar sizeToFit];
+    self.searchController.searchBar.backgroundColor = UIColor.whiteColor;
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.searchBar.placeholder = @"请输入要搜索的地点";
+    self.searchController.dimsBackgroundDuringPresentation = false;
+    self.searchController.searchBar.delegate = self;
+    self.searchController.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
 }
 
 #pragma mark - Table view data source
@@ -69,56 +80,78 @@
     return self.POIArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    }
-
-    AMapPOI * poi = [self.POIArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = poi.name;
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
+    MapPOIAnnotation * annotation = [self.POIArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = annotation.title;
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MapPOIAnnotation * annotation = [self.POIArray objectAtIndex:indexPath.row];
+    if (_delegate && [_delegate respondsToSelector:@selector(tableViewController:didSelectPOI:)]) {
+        [_delegate tableViewController:self didSelectPOI:annotation];
+    }
+    [self.navigationController popViewControllerAnimated:true];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)gotoDetailForPoi:(AMapPOI *)poi
+{
+    if (poi != nil) {
+        PoiDetailViewController* detail = [[PoiDetailViewController alloc] init];
+        detail.poi = poi;
+        [self.navigationController pushViewController:detail animated:YES];
+    }
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+
+#pragma mark - searchBar delegate
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    NSLog(@"/n输入完毕了");
 }
-*/
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"/n点击了搜索按钮");
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    NSLog(@"/n点击了取消按钮");
+}
+
+#pragma mark - map search delegate
+
+/* POI 搜索回调. */
+- (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
+{
+    [self.POIArray removeAllObjects];
+    if (response.pois.count == 0) {
+        return;
+    }
+    NSMutableArray *poiAnnotations = [NSMutableArray arrayWithCapacity:response.pois.count];
+
+    [response.pois enumerateObjectsUsingBlock:^(AMapPOI *obj, NSUInteger idx, BOOL *stop) {
+        [poiAnnotations addObject:[[MapPOIAnnotation alloc] initWithPOI:obj]];
+    }];
+
+    [self.POIArray addObjectsFromArray:poiAnnotations];
+
+    [self.tableView reloadData];
+}
 
 #pragma mark - search delegate
-- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
 
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    NSString * inputStr = searchController.searchBar.text;
+    if (inputStr.length == 0) {
+        return;
+    }
+    AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc] init];
+
+    request.keywords            = inputStr;
+    request.city                = @"北京";
+
+    [self.searchAPI AMapPOIKeywordsSearch:request];
 }
+
 @end
